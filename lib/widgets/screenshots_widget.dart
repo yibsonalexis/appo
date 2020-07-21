@@ -74,15 +74,7 @@ class _ScreenshotsWidgetState extends State<ScreenshotsWidget>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    // if (_pageController.hasClients && size.width < 700) {
-    //   _pageController = new PageController(
-    //     viewportFraction: 0.8,
-    //   );
-    // }
     return Container(
-        // width: size.width * .9,
-        // padding: EdgeInsets.symmetric(horizontal: 100),
         child: PageView.builder(
             itemCount: listScreenshots.length,
             controller: _pageController,
@@ -97,24 +89,18 @@ class _ScreenshotsWidgetState extends State<ScreenshotsWidget>
       BuildContext context, ScreenshotModel screenshot, bool active) {
     Size size = MediaQuery.of(context).size;
 
-    final double blur = active ? 15 : 0;
-    final double offset = active ? 0.0 : 0;
     final double top = active ? 25 : 260;
 
     return Stack(
       children: <Widget>[
         AnimatedContainer(
-          // color: Colors.blue,
           duration: Duration(milliseconds: 400),
           height: active ? size.height : size.height * .5,
           curve: Curves.easeOutQuint,
-          // padding: EdgeInsets.all(8.0),
           margin: EdgeInsets.only(top: top, right: 5.0, bottom: 5.0, left: 0.0),
           alignment: Alignment.center,
           child: Image.asset(
             screenshot.image,
-            // height: 800,
-            // alignment: Alignment.center,
             fit: BoxFit.fill,
           ),
         )

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppbarNavService with ChangeNotifier {
-  // static final AppbarNavService _ = AppbarNavService._internal();
-  // factory AppbarNavService() => _;
-  // AppbarNavService._internal();
-
   PageController _pageController = PageController();
 
   PageController get pageController => _pageController;

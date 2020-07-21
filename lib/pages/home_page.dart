@@ -14,24 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // PageController _pageController = PageController();
   Timer _debounce;
-
-  @override
-  void initState() {
-    // _pageController.addListener(() {
-    //   Provider.of<AppbarNavService>(context, listen: false).currentIndexNav =
-    //       _pageController.page.floor();
-    // });
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    // _pageController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     AppbarNavService _navService = Provider.of<AppbarNavService>(context);
@@ -107,7 +90,6 @@ class _HomePageState extends State<HomePage> {
         ),
         Positioned(
           top: 0,
-          // bottom: 0,
           child: Image.asset(
             "assets/images/bg2.png",
             width: size.width,

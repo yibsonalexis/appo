@@ -10,8 +10,6 @@ class AppBarWidget extends StatefulWidget {
 }
 
 class _AppBarWidgetState extends State<AppBarWidget> {
-  // AppbarNavService _navService = AppbarNavService();
-
   final List<String> itemsBar = ["Inicio ", "Descargar", "Contactanos"];
 
   @override
@@ -96,7 +94,6 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         Container(
           width: 50,
           height: 50,
-          // margin: EdgeInsets.all(2),
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(100)),
           child: Image.asset(
