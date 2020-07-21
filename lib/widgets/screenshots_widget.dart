@@ -45,11 +45,8 @@ class _ScreenshotsWidgetState extends State<ScreenshotsWidget>
         image: "assets/images/screenshot11.png",
         title: "Appo espera por ti, ten información de tu cita en tiempo real"),
   ];
-  Animation<double> sizeAnimation;
-  Animation<double> opacityAnimation;
-  AnimationController animationController;
 
-  final PageController _pageController = PageController(
+  PageController _pageController = PageController(
     viewportFraction: 0.3,
   );
   int currentPageValue = 0;
@@ -59,20 +56,6 @@ class _ScreenshotsWidgetState extends State<ScreenshotsWidget>
 
   @override
   void initState() {
-    animationController =
-        AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    sizeAnimation = Tween<double>(begin: 50, end: 150).animate(
-        animationController)
-      // opacityAnimation = Tween<double>(begin: 0.1, end: 1).animate(animationController)
-      ..addStatusListener((status) {
-        if (status == AnimationStatus.completed) {
-          animationController.reverse();
-        } else if (status == AnimationStatus.dismissed) {
-          animationController.forward();
-        }
-      });
-    animationController.forward();
-
     _pageController.addListener(() {
       int next = _pageController.page.round();
       if (currentPageValue != next)
@@ -86,13 +69,17 @@ class _ScreenshotsWidgetState extends State<ScreenshotsWidget>
   @override
   void dispose() {
     _pageController.dispose();
-    animationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    // if (_pageController.hasClients && size.width < 700) {
+    //   _pageController = new PageController(
+    //     viewportFraction: 0.8,
+    //   );
+    // }
     return Container(
         // width: size.width * .9,
         // padding: EdgeInsets.symmetric(horizontal: 100),
