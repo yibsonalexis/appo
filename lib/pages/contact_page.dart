@@ -40,7 +40,7 @@ class ContactPage extends StatelessWidget {
               InkWell(
                 onTap: () => _launchURL("https://www.instagram.com/appo_co/"),
                 child: Image.asset(
-                  "assets/images/social/instagram.png",
+                  "assets/images/social/instagram_.png",
                   width: size.width * .1,
                   fit: BoxFit.contain,
                 ),
