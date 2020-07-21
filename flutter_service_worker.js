@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "3903e52f9f599710153397251c933dd6",
+  "main.dart.js": "bb43cc5ff0ccd98aa1f642bddbce5c48",
 "favicon.png": "fc784a761d22837d836b0ba7e7b0f233",
 "manifest.json": "92f66eddaae4cbaa5dd7af850471216d",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
@@ -13,11 +13,11 @@ const RESOURCES = {
 "assets/assets/images/bg1.png": "1f8e3dab6b16a97e530d59302d9942f7",
 "assets/assets/images/screenshot3.png": "016cb780e35f735787d677c27e151b3f",
 "assets/assets/images/screenshot1.png": "6f8acc0bf6fbd035b4ab66eb6f9a42be",
+"assets/assets/images/social/instagram_.png": "be06d2915e77036dc9ccdb5d9e9108cf",
 "assets/assets/images/social/twitter.png": "faa8186784f6d162786c5c0eb53c4a09",
 "assets/assets/images/social/youtube.png": "688896c12cc147b26cd6e1c9db2eb58b",
 "assets/assets/images/social/linkedin.png": "edf1196401d8495e07067f861b0a1155",
 "assets/assets/images/social/facebook.png": "9d2f79cdfcdf767f952000893939f877",
-"assets/assets/images/social/Instagram.png": "be06d2915e77036dc9ccdb5d9e9108cf",
 "assets/assets/images/screenshot12.png": "a5c0fa412c35967e2f0150c877705164",
 "assets/assets/images/screenshot5.png": "68d29006d60ba008179ee8a5a7961b7e",
 "assets/assets/images/bg2.png": "763ab3fd41441a104472cfb9126f4f98",
@@ -34,7 +34,7 @@ const RESOURCES = {
 "assets/assets/images/screenshot8.png": "b1afbf801768474fe88c90ff8833e8e6",
 "assets/assets/images/googleplay.png": "19fb58bc0e8b2117b51c2d719cc8a17a",
 "assets/assets/images/applestore.png": "c03635ae6aedd4616802eee6d53e1515",
-"assets/AssetManifest.json": "d158c9d32b175e2026098a2e084192aa",
+"assets/AssetManifest.json": "b35f3b1c6eef1139500f1be107a76fdc",
 "icons/Icon-512.png": "bc31e23f8fb04d6a62250f472e27882f",
 "icons/Icon-192.png": "511883f25c1ca4f445518534a302f675",
 "index.html": "afc5bb6a6a834a43bf5fac6df7c9559e",
