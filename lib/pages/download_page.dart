@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DownloadPage extends StatelessWidget {
-  _launchURL() async {
-    const url = 'https://play.google.com/store/apps/details?id=com.appo.app';
+  _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -39,7 +38,8 @@ class DownloadPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     InkWell(
-                      onTap: _launchURL,
+                      onTap: () => _launchURL(
+                          'https://play.google.com/store/apps/details?id=com.appo.app'),
                       child: Image.asset(
                         "assets/images/googleplay.png",
                         width: 150,
@@ -57,16 +57,21 @@ class DownloadPage extends StatelessWidget {
                       width: size.width * .3,
                       fit: BoxFit.contain,
                     ),
-                    Image.asset(
-                      "assets/images/applestore.png",
-                      width: 150,
+                    InkWell(
+                      onTap: () => _launchURL(
+                          'https://apps.apple.com/us/app/id1525024119'),
+                      child: Image.asset(
+                        "assets/images/applestore.png",
+                        width: 150,
+                      ),
                     ),
                   ],
                 )
               : Column(
                   children: [
                     InkWell(
-                      onTap: _launchURL,
+                      onTap: () => _launchURL(
+                          'https://play.google.com/store/apps/details?id=com.appo.app'),
                       child: Image.asset(
                         "assets/images/googleplay.png",
                         width: 150,
@@ -75,9 +80,13 @@ class DownloadPage extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Image.asset(
-                      "assets/images/applestore.png",
-                      width: 150,
+                    InkWell(
+                      onTap: () => _launchURL(
+                          'https://apps.apple.com/us/app/id1525024119'),
+                      child: Image.asset(
+                        "assets/images/applestore.png",
+                        width: 150,
+                      ),
                     ),
                   ],
                 ),
